@@ -1,0 +1,18 @@
+Unfortunately this script uses java's comm library which is a major pain in the bum.  Sorry for that.
+
+Dependencies:
+1. Java JDK: http://java.sun.com/
+2. Java Comm library: http://java.sun.com/products/javacomm/
+3. jRuby: http://jruby.codehaus.org/
+4. Cruise Control: http://cruisecontrol.sourceforge.net/index.html
+
+Installation:
+1. Copy the x10_controller.rb file to your bin directory
+2. copy x10.jar (from CC installation) to your bin directory
+3. copy comm.jar to your bin directory
+4. create a javax.comm.properties file in your bin directory
+5. edit the x10_controller.rb file to point to your CC status page.
+6. make sure your x10 transciever is plugged in and your build light is attached.
+7. make sure your cm17A is plugged into your serial port.
+8. turn on the light and run the script like this: jruby x10_controller.rb  The light should turn off.
+9. if it works setup a cron task to have the script poll your build every minute.  Here is a sample cron entry: * * * * * export JAVA_HOME=/opt/bea91/jrockit90_150_04; cd /home/pair/bin; /home/pair/bin/jruby x10_controller.rb
