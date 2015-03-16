@@ -1,0 +1,3 @@
+The machine that our CC build runs on is stashed away in a server room somewhere so we can't use the CC x10 plugin to control our build light. To get around this we have a cron job on one of our pairing stations that runs a jRuby script. The script does a screen scrape of our cruise status page and turns the build light on (when any project is failing) or off (when all projects are happy). Three cheers for the build light!
+
+The readme file has some instructions for using the script.
